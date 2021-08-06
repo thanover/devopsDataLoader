@@ -7,7 +7,7 @@ async function main() {
   const jsonData = await csv().fromFile(csvFileName);
 
   for (let row of jsonData) {
-    axios.post("http://localhost:3000/apps", row).then(
+    axios.post("http://localhost:3001/apps", row).then(
       (response) => {
         console.log(response.data);
         console.log(response.status);
